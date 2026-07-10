@@ -28,10 +28,10 @@ class Product {
 
 const saleTax = 0.05;
 
-const product1 = new product1("Shirt", 19.99);
-const product2 = new product2("Pants", 22.50);
+const product1 = new Product("Shirt", 19.99);
+const product2 = new Product("Pants", 22.50);
 
 product1.displayProduct();
 
-const total = new product1.calculateTotal(saleTax);
-console.log("TOtal price (with tax): " + total.toFixed(2));
+const total = product1.calculateTotal(saleTax);
+console.log("Total price (with tax): " + total.toFixed(2));
