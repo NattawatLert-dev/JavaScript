@@ -2,17 +2,26 @@
 //                   และใช้งานเพียงครั้งเดียว
 //                   (parameters) => some code
 
-//Ex.1
+// ==========================
+// EXAMPLE 1
+// ==========================
+
 const hello = () => console.log("Hello");
 
 hello(); // Hello
 
-//Ex.2
+// ==========================
+// EXAMPLE 2
+// ==========================
+
 const hello = (name) => console.log("Hello" + name);
 
 hello("Tle"); // Hello Tle
 
-//Ex.3
+// ==========================
+// EXAMPLE 3
+// ==========================
+
 const hello = (name, age) => {
     console.log("Hello" + name)
     console.log("You are " + age + " years old")
@@ -20,10 +29,32 @@ const hello = (name, age) => {
 
 hello("Tle", 21);
 
-//Ex.4 
+// ==========================
+// EXAMPLE 4
+// ==========================
+
 setTimeout(() => console.log("hello"), 3000);
 
-//Ex.5
+// ==========================
+// EXAMPLE 5
+// ==========================
+
+// ฟังก์ชันหาผลบวก
+const add = (a, b) => {
+
+    // ส่งค่าผลบวกกลับ
+    return a + b;
+};
+
+// เรียกใช้งาน
+let result = add(10, 20);
+
+console.log(result);
+
+// ==========================
+// EXAMPLE 6
+// ==========================
+
 const numbers = [1, 2, 3, 4, 5, 6];
 
 const square = numbers.map((element) => Math.pow(element, 2));
