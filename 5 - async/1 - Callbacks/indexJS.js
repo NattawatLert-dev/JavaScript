@@ -5,7 +5,10 @@
 //            2. การส่งคำขอผ่านเครือข่าย (Network requests)
 //            3. การโต้ตอบกับฐานข้อมูล (Interacting with databases)
 
-// Ex.1 ฟังก์ชัน greet รับพารามิเตอร์ 2 ตัว
+//==================================
+// EXAMPLE 1 ฟังก์ชัน greet รับพารามิเตอร์ 2 ตัว
+//==================================
+
 // 1. name = ชื่อที่ต้องการทักทาย
 // 2. callback = ฟังก์ชันที่จะถูกเรียกหลังจากทักทายเสร็จ
 function greet(name, callback) {
@@ -30,19 +33,36 @@ greet("Tle", () => {
 // คำสั่งนี้จะทำงานหลังจาก greet() ทำงานเสร็จ
 console.log("End");
 
-//Ex.2
+/*
+Hello Tle
+Welcome!
+End
+*/
+
+//========================
+// EXAMPLE 2
+//========================
+
 function hello(callback) {
     console.log("Hello!");
     callback();
 }
 
 function goodbye() {
-    console.log("Goodbyd!");
+    console.log("Goodbye!");
 }
 
 hello(goodbye);
 
-//Ex.3 ฟังก์ชัน calculate รับเลข 2 ตัว และฟังก์ชัน operation
+/*
+Hello!
+Goodbye!
+*/
+
+//===================================================
+//EXAMPLE 3 ฟังก์ชัน calculate รับเลข 2 ตัว และฟังก์ชัน operation
+//===================================================
+
 function calculate(a, b, operation) {
 
     // เรียกใช้ฟังก์ชันที่รับมา
@@ -66,19 +86,33 @@ console.log(calculate(10, 20, add));      // 30
 // ส่งฟังก์ชัน multiply เข้าไปเป็น callback
 console.log(calculate(10, 20, multiply)); // 200
 
-//Ex.4
+//============================
+//EXAMPLE 4
+//============================
+
+function sum(callback, x, y) {
+    let result = x + y;
+    callback(result);
+}
+
 function displayPage(result) {
     document.getElementById("myText").textContent = result;
 }
 
 sum(displayPage, 1, 2);
 
-//Ex.5 Callback แบบ Anonymous Function
+//====================================
+//EXAMPLE 5 Callback แบบ Anonymous Function(ฟังก์ชันที่ไม่มีชื่อ)
+//====================================
+
 calculate(10, 20, function (x, y) {
     console.log(x + y);
 });
 
-//Ex.6 Callback แบบ Asynchronous
+//==============================
+//EXAMPLE 6 Callback แบบ Asynchronous
+//==============================
+
 console.log("A");
 
 setTimeout(function () {
